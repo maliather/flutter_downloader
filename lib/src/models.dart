@@ -58,6 +58,7 @@ class DownloadTask {
     required this.url,
     required this.filename,
     required this.savedDir,
+    required this.headers,
     required this.timeCreated,
     required this.allowCellular,
   });
@@ -80,6 +81,8 @@ class DownloadTask {
   /// Absolute path to the directory where the downloaded file will saved.
   final String savedDir;
 
+  final Map<String, dynamic> headers;
+
   /// Timestamp when the task was created.
   final int timeCreated;
 
@@ -88,5 +91,5 @@ class DownloadTask {
 
   @override
   String toString() =>
-      'DownloadTask(taskId: $taskId, status: $status, progress: $progress, url: $url, filename: $filename, savedDir: $savedDir, timeCreated: $timeCreated, allowCellular: $allowCellular)';
+      'DownloadTask(taskId: $taskId, status: $status, progress: $progress, url: $url, filename: $filename, savedDir: $savedDir, timeCreated: $timeCreated, headers:$headers, allowCellular: $allowCellular)';
 }

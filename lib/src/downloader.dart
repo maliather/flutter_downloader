@@ -162,6 +162,7 @@ class FlutterDownloader {
             filename: item['file_name'] as String?,
             savedDir: item['saved_dir'] as String,
             timeCreated: item['time_created'] as int,
+            headers: jsonDecode(item['headers']),
             allowCellular: item['allow_cellular'] as bool,
           );
         },
@@ -220,6 +221,7 @@ class FlutterDownloader {
             filename: item['file_name'] as String?,
             savedDir: item['saved_dir'] as String,
             timeCreated: item['time_created'] as int,
+            headers: jsonDecode(item['headers']),
             allowCellular: item['allow_cellular'] as bool,
           );
         },
